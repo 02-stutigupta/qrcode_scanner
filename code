@@ -1,0 +1,11 @@
+import qrcode
+import matplotlib.pyplot as plt
+#add data which ypu want to be qr represented
+data = "https://github.com/02-stutigupta"
+#output filename
+filename = "My_Github_QR_Code.png"
+#generate qr code
+image = qrcode.make(data)
+#save image into a file 
+image.save(filename)
+plt.imshow(image,cmap='gray')
